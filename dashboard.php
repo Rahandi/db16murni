@@ -179,7 +179,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 
                                                     echo '<td>';
                                                     echo '<a class="zmdi zmdi-edit" href="form.php?nrp='.$data['NRP'].'"></a>';
-                                                    echo '<a class="zmdi zmdi-delete" href="hapus.php?nrp='.$data['NRP'].'"></a>';
+                                                    echo '<a style="margin-left: 30%" class="zmdi zmdi-delete" href="hapus.php?nrp='.$data['NRP'].'"></a>';
                                                     echo '<td>';
 
                                                     echo '</tr>';
