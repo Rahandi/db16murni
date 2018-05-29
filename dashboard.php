@@ -18,7 +18,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard 3</title>
+    <title>Home</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -41,6 +41,10 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
 
+    <!-- Pagination-->
+    <link href="pagination/css/pagination.css" rel="stylesheet" type="text/css" />
+    <link href="pagination/css/A_green.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body class="animsition">
@@ -51,7 +55,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
                 <div class="header3-wrap">
                     <div class="header__logo">
                         <a href="#">
-                            <img src="images/icon/logo-white.png" alt="CoolAdmin" />
+                            <img src="images/icon/logo (2).png" alt="TC16" />
                         </a>
                     </div>
                     <div class="header__tool">
@@ -142,7 +146,22 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
                                     </thead>
                                     <tbody>
                                                 <?php
-                                                $sql = 'SELECT * FROM angkatan16';
+                                                if (isset($_GET['pageno'])) {
+                                                    $pageno = $_GET['pageno'];
+                                                } else {
+                                                    $pageno = 1;
+                                                }
+
+                                                $no_of_records_per_page = 10;
+                                                $offset = ($pageno-1) * $no_of_records_per_page;
+
+                                                $total_pages_sql = "SELECT COUNT(*) FROM angkatan16";
+                                                $result = mysqli_query($db,$total_pages_sql);
+                                                $total_rows = mysqli_fetch_array($result)[0];
+                                                $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+                                                $sql = "SELECT * FROM angkatan16 LIMIT $offset, $no_of_records_per_page";
+        
                                                 $query = mysqli_query($db, $sql);
 
                                                 while($data = mysqli_fetch_array($query)){
@@ -157,12 +176,23 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 
                                                     echo '<td>';
                                                     echo '<a class="zmdi zmdi-edit" href="form.php?nrp='.$data['NRP'].'"></a>';
-            echo '<a class="zmdi zmdi-delete" href="hapus.php?nrp='.$data['NRP'].'"></a>';
+                                                    echo '<a class="zmdi zmdi-delete" href="hapus.php?nrp='.$data['NRP'].'"></a>';
                                                     echo '<td>';
 
                                                     echo '</tr>';
                                                 }
                                                 ?>
+
+                                                <ul class="pagination">
+                                                    <li><a href="?pageno=1">First</a></li>
+                                                    <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+                                                        <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
+                                                    </li>
+                                                    <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+                                                        <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a>
+                                                    </li>
+                                                    <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+                                                </ul>
                                     </tbody>
                                 </table>
                             </div>
