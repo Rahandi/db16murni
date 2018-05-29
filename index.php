@@ -46,7 +46,7 @@
     <!-- Pagination-->
     <link href="pagination/css/pagination.css" rel="stylesheet" type="text/css" />
     <link href="pagination/css/A_green.css" rel="stylesheet" type="text/css" />
-    
+
     <style type="text/css">
         *{
             font-family: "Crete Round", serif, !important;
@@ -159,7 +159,7 @@
 <body>
     <header>
         <div class="wrapper">
-            <h1>Simply<span class="color">.</span></h1>
+            <h1><img src="img/logo.png" height="50" width="50"> Database<span class="color">.</span></h1>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
