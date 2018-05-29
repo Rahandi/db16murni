@@ -55,7 +55,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
                 <div class="header3-wrap">
                     <div class="header__logo">
                         <a href="#">
-                            <img src="images/icon/logo (2).png" alt="TC16" />
+                            <img  style="width: 10%; height: auto; margin-left: 10%" src="img/logo.png"  />
                         </a>
                     </div>
                     <div class="header__tool">
