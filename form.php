@@ -119,16 +119,16 @@ input[type=text],textarea {
 <form action="<?php echo $data['link'];?>" method="POST">
     <fieldset>
     	<div>
-    		<p>
+    		<div class="form-group row">
             <?php
                 if (isset($_GET['nrp'])){
                     echo "<input type='hidden' name='nrp' value='".$data['NRP']."'>";
                 } else{
-                    echo '<label for="nrp">NRP: </label>';
-                    echo '<input type="text" name="nrp" />';
+                    echo '<label class="col-sm-2 col-form-label" for="nrp">NRP: </label>';
+                    echo '<div class="col-sm-10"><input type="text" name="nrp" /></div>';
                 }
             ?>
-        </p>
+        </div>
         <div class="form-group row">
             	<label class="col-sm-2 col-form-label" for="nama">Nama: </label>
             	<div class="col-sm-10">
