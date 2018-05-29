@@ -51,7 +51,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
                 <div class="header3-wrap">
                     <div class="header__logo">
                         <a href="#">
-                            <img  style="width: 10%; height: auto; margin-left: 10%" src="img/logo.png"  />
+                            <img src="images/icon/logo-white.png" alt="CoolAdmin" />
                         </a>
                     </div>
                     <div class="header__tool">
