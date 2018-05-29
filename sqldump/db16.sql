@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2018 at 08:59 PM
+-- Generation Time: May 29, 2018 at 08:36 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -279,7 +279,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'rahandi', 'rahandinoor@gmail.com', '$2y$10$dvLhQvkA.25HJ8EArsxJke/Fq8KL4T/v.O54T/Z8KkoJfaAN4isV.', 'JgqHaEuAgBtSjHMUtzRS7kgmiJf0sQx4pgRvfCxHXdCpWCG9LOgfWTS4dtdM', '2018-05-27 08:03:24', '2018-05-27 08:03:24'),
 (2, 'admin', 'admin@gmail.com', '$2y$10$H8i85DymqyC3.Gksei.D.ODHRLRxhl23SdQ6TX.Wn6CAqsABFcTxS', NULL, '2018-05-27 08:47:05', '2018-05-27 08:47:05'),
-(4, 'randi', 'kosong', '$2y$10$Zj6NRyP6vzUNEpoDWSzFtOV2JhF4aLkRXCJ7poN6132.byfYt/8py', NULL, NULL, NULL);
+(4, 'randi', 'kosong', '$2y$10$Zj6NRyP6vzUNEpoDWSzFtOV2JhF4aLkRXCJ7poN6132.byfYt/8py', NULL, NULL, NULL),
+(6, 'fasma', 'kosong', '$2y$10$PMmNV2v.XWrq0rMq3ByVhuUoynpohcVOWaLOAkJg0U1sJRKdpSnpi', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -517,8 +518,7 @@ ALTER TABLE `password_resets`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user_data`
@@ -546,7 +546,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
