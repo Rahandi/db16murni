@@ -58,14 +58,20 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
                             <img  style="width: 10%; height: auto; margin-left: 10%" src="img/logo.png"  />
                         </a>
                     </div>
-                    <div>
-                        <i class="fas fa-desktop"></i>
-                        <span class="bot-line"></span><?php echo htmlspecialchars($_SESSION['username']); ?></a>
-                    </div>
-                    <div>
-                        <a href="logout.php">
-                        <i class="zmdi zmdi-power"></i>
-                        <span class="bot-line"></span>Keluar</a>
+                    <div class="header__tool">
+                        <div class="account-wrap">
+                            <div class="account-item account-item--style2 clearfix js-item-menu">
+                                <h2 style="color: white">
+                                    <?php echo htmlspecialchars($_SESSION['username']); ?>
+                                </h2>
+                                <div class="account-dropdown js-dropdown">
+                                    <div class="account-dropdown__footer">
+                                        <a href="logout.php">
+                                            <i class="zmdi zmdi-power"></i>Keluar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,6 +103,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
                                             <th> Email </th>
                                             <th> No Telp </th>
                                             <th> Alamat </th>
+                                            <th> Action </th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -131,8 +138,8 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
                                                     echo '<td>'.$data['ALAMAT'].'</td>';
 
                                                     echo '<td>';
-                                                    echo '<a class="zmdi zmdi-edit" href="form.php?nrp='.$data['NRP'].'"></a>';
-                                                    echo '<a style="margin-left: 30%" class="zmdi zmdi-delete" href="hapus.php?nrp='.$data['NRP'].'"></a>';
+                                                    echo '<p><a class="zmdi zmdi-edit" href="form.php?nrp='.$data['NRP'].'"> Edit </a></p>';
+                                                    echo '<p><a class="zmdi zmdi-delete" href="hapus.php?nrp='.$data['NRP'].'"> Hapus </a></p>';
                                                     echo '<td>';
 
                                                     echo '</tr>';

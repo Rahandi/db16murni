@@ -91,16 +91,16 @@ input[type=text],textarea {
             <div class="section__content section__content--p35">
                 <div class="header3-wrap">
                     <div class="header__logo">
-                        <a href="#">
+                        <a href="dashboard.php">
                             <img  style="width: 10%; height: auto; margin-left: 10%" src="img/logo.png"  />
                         </a>
                     </div>
                     <div class="header__tool">
                         <div class="account-wrap">
                             <div class="account-item account-item--style2 clearfix js-item-menu">
-                                <div class="image">
-                                    <img src="images/icon/avatar-icon.png"/>
-                                </div>
+                                <h2 style="color: white">
+                                    <?php echo htmlspecialchars($_SESSION['username']); ?>
+                                </h2>
                                 <div class="account-dropdown js-dropdown">
                                     <div class="account-dropdown__footer">
                                         <a href="logout.php">
@@ -118,66 +118,62 @@ input[type=text],textarea {
 <div class="container">
 <form action="<?php echo $data['link'];?>" method="POST">
     <fieldset>
-    	<div>
-    		<div class="form-group row">
+        <div>
             <?php
                 if (isset($_GET['nrp'])){
                     echo "<input type='hidden' name='nrp' value='".$data['NRP']."'>";
                 } else{
+                    echo '<div class="form-group row">';
                     echo '<label class="col-sm-2 col-form-label" for="nrp">NRP: </label>';
-                    echo '<div class="col-sm-10"><input type="text" name="nrp" /></div>';
+                    echo '<div class="col-sm-10">';
+                    echo '<input type="text" name="nrp" />';
+                    echo '</div>';
+                    echo '</div>';
                 }
             ?>
-        </div>
-        <div class="form-group row">
-            	<label class="col-sm-2 col-form-label" for="nama">Nama: </label>
-            	<div class="col-sm-10">
-            		<input type="text" name="nama" value="<?php echo $data['NAMA'] ?>" />
-
-            	</div>
-        		
-        </div>
-        <div class="form-group row">
-        	<label class="col-sm-2 col-form-label" for="nama_pang">Nama Panggilan: </label>
-            <div class="col-sm-10">
-            	<input type="text" name="nama_pang" value="<?php echo $data['NAMA_PANG'] ?>" />
+            <div class="form-group row">
+                    <label class="col-sm-2 col-form-label" for="nama">Nama: </label>
+                    <div class="col-sm-10">
+                        <input type="text" name="nama" value="<?php echo $data['NAMA'] ?>" />
+                    </div>
             </div>
-        </div>
-            
-        <div class="form-group row">
-        	<label class="col-sm-2 col-form-label" for="email">Email: </label>
-        	<div class="col-sm-10">
-        		<input type="text" name="email" value="<?php echo $data['EMAIL'] ?>" />
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="nama_pang">Nama Panggilan: </label>
+                <div class="col-sm-10">
+                    <input type="text" name="nama_pang" value="<?php echo $data['NAMA_PANG'] ?>" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="email">Email: </label>
+                <div class="col-sm-10">
+                    <input type="text" name="email" value="<?php echo $data['EMAIL'] ?>" />
 
-        	</div>
-        </div>
-              
-        <div class="form-group row">
-        	<label class="col-sm-2 col-form-label" for="no_telp">No.Telp: </label>
-        	<div class="col-sm-10">
-        		<input type="text" name="no_telp" value="<?php echo $data['NO_TELP'] ?>" />
-        	</div>
-        </div>
-            
-        
-        <div class="form-group row">
-        	<label class="col-sm-2 col-form-label" for="alamat">Alamat: </label>
-        	<div class="col-sm-10">
-        		<textarea style="width: 22.2%" name="alamat"><?php echo $data['ALAMAT'] ?></textarea>
-        	</div>
-            
-        </div>
-            
-        <div class="row">
-        	<div class="col-sm-5"><hr></div>
-        </div>
-            
-        <div class="form-group row">
-        	<div class="col-sm-2 col-form-label"></div>
-        	<input  style="margin-left: 1.3%" class="btn btn-info col-sm-2 pull-right" type="submit" value="<?php echo $data['mark'] ?>" name="<?php echo $data['action'] ?>" />
-        </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="no_telp">No.Telp: </label>
+                <div class="col-sm-10">
+                    <input type="text" name="no_telp" value="<?php echo $data['NO_TELP'] ?>" />
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="alamat">Alamat: </label>
+                <div class="col-sm-10">
+                    <textarea style="width: 22.2%" name="alamat"><?php echo $data['ALAMAT'] ?></textarea>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-5"><hr></div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-2 col-form-label"></div>
+                <input  style="margin-left: 1.3%" class="btn btn-info col-sm-2 pull-right" type="submit" value="<?php echo $data['mark'] ?>" name="<?php echo $data['action'] ?>" />
+            </div>
     	</div>
-        
     </fieldset>
 </form>
 </div>
