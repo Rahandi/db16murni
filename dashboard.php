@@ -54,70 +54,23 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
             <div class="section__content section__content--p35">
                 <div class="header3-wrap">
                     <div class="header__logo">
-                        <a href="#">
+                        <a href="dashboard.php">
                             <img  style="width: 10%; height: auto; margin-left: 10%" src="img/logo.png"  />
                         </a>
                     </div>
-                    <div class="header__tool">
-                        <div class="account-wrap">
-                            <div class="account-item account-item--style2 clearfix js-item-menu">
-                                <div class="image">
-                                    <img src="images/icon/avatar-icon.png"/>
-                                </div>
-                                <div class="account-dropdown js-dropdown">
-                                    <div class="account-dropdown__footer">
-                                        <a href="logout.php">
-                                            <i class="zmdi zmdi-power"></i>Keluar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div>
+                        <i class="fas fa-desktop"></i>
+                        <span class="bot-line"></span><?php echo htmlspecialchars($_SESSION['username']); ?></a>
+                    </div>
+                    <div>
+                        <a href="logout.php">
+                        <i class="zmdi zmdi-power"></i>
+                        <span class="bot-line"></span>Keluar</a>
                     </div>
                 </div>
             </div>
         </header>
         <!-- END HEADER DESKTOP-->
-
-        <!-- PAGE CONTENT-->
-        <div class="page-content--bgf7">
-            <!-- BREADCRUMB-->
-            <section class="au-breadcrumb2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="au-breadcrumb-content">
-                                <div class="au-breadcrumb-left">
-                                    <span class="au-breadcrumb-span">You are here:</span>
-                                    <ul class="list-unstyled list-inline au-breadcrumb__list">
-                                        <li class="list-inline-item active">
-                                            <a href="#">Home</a>
-                                        </li>
-                                        <li class="list-inline-item seprate">
-                                            <span>/</span>
-                                        </li>
-                                        <li class="list-inline-item">Dashboard</li>
-                                    </ul>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- END BREADCRUMB-->
-
-            <!-- WELCOME-->
-            <section class="welcome p-t-10">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="title-4">Welcome back
-                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
-                            </h1>
-                            <hr class="line-seprate">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- END WELCOME-->
 
             <!-- DATA TABLE-->
             <section class="p-t-20">
