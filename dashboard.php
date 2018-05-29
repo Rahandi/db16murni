@@ -127,8 +127,11 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
                             <h3 class="title-5 m-b-35">database angkatan</h3>
                             <div class="table-data__tool">
                                 <div class="table-data__tool-right">
-                                    <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                        <a href="form.php" class="zmdi zmdi-plus">Tambah Baru</a></button>
+                                    <a href="form.php">
+                                        <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                            Tambah Baru
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                             <div class="table-responsive table-responsive-data2">
