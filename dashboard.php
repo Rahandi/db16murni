@@ -184,14 +184,14 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
                                                 ?>
 
                                                 <ul class="pagination">
-                                                    <li><a href="?pageno=1">First</a></li>
-                                                    <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
-                                                        <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
+                                                    <li class="btn btn-info" ><a style="color: white" href="?pageno=1">First</a></li>
+                                                    <li style="margin-left: 2px" class="<?php if($pageno <= 1){ echo 'disabled'; } ?> btn btn-info">
+                                                        <a style="color: white" href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
                                                     </li>
-                                                    <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
-                                                        <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a>
+                                                    <li style="margin-left: 2px" class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?> btn btn-info">
+                                                        <a style="color: white" href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a>
                                                     </li>
-                                                    <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+                                                    <li style="margin-left: 2px" class="btn btn-info"><a style="color: white" href="?pageno=<?php echo $total_pages; ?> ">Last</a></li>
                                                 </ul>
                                     </tbody>
                                 </table>
@@ -201,20 +201,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
                 </div>
             </section>
             <!-- END DATA TABLE-->
-
-            <!-- COPYRIGHT-->
-            <section class="p-t-60 p-b-20">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="copyright">
-                                <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- END COPYRIGHT-->
+<br><br><br><br>
         </div>
 
     </div>

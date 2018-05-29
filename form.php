@@ -181,6 +181,7 @@ input[type=text],textarea {
     </fieldset>
 </form>
 </div>
+
 </div>
 
 <!-- Jquery JS-->
