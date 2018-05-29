@@ -8,6 +8,9 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <header>
@@ -16,7 +19,7 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="login2.php">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -25,39 +28,44 @@
     <div id="hero-image">
         <div class="wrapper">
             <h2><strong>Database of Informatics Engineering 2016</strong></h2>
-            <a href="#" class="button-1">Get Started</a>
+            <a href="login2.php" class="button-1">Get Started</a>
         </div>
     </div>
 
-    <div id="primary-content">
+    <div id="cta">
         <div class="wrapper">
-            <article>
-                <h3>Featured Content</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod leo a nibh dignissim tincidunt. Nam ultricies odio ac neque suscipit volutpat. Ut dictum adipiscing felis sed malesuada. Integer porta sem nec nibh hendrerit imperdiet. </p>
-                <a href="#"><img src="images/video-placeholder.jpg" alt="video placeholder" /></a>
-            </article>
-        </div>
+            <h3>Heard Enough?</h3>
+            <p>This is database of Informatics Engineer 2016 from Institut Teknologi Sepuluh Nopember</p>
+            <a href="login2.php" class="button-2">Get Started</a>
     </div>
     
     <div id="secondary-content">
         <div class="wrapper">
-            <article></article>
-            <article></article>
+           <article style="background-image: url('images/article-image-1.jpg');">
+                <div class="overlay">
+                    <h4>Secondary Content</h4>
+                    <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod leo a nibh dignissim tincidunt nam.</small></p>
+                    <a href="#" class="more-link">View more</a>
+                </div>
+            </article>
+            <article style="background-image: url('images/article-image-2.jpg');">
+                <div class="overlay">
+                    <h4>Secondary Content</h4>
+                    <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod leo a nibh dignissim tincidunt nam.</small></p>
+                    <a href="#" class="more-link">View more</a>
+                </div>
+            </article><div class="clear"></div>
         </div>
     </div>
 
     <footer>
         <div class="wrapper">
-            <div id="footer-info"></div>
-            <div id="footer-links">
-                <ul></ul>
-                <ul></ul>
-                <ul></ul>
+            <div id="footer-info">
+                <p>Copyright 2014 Informatics Engineer of Institut Teknologi Sepuluh Nopember. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <!-- <a href="dashboard.php">Login</a>
-    <table border="1">
+    <!-- <table border="1">
         <thead>
             <tr>
                 <th>NRP</th>
@@ -70,23 +78,23 @@
         </thead>
         <tbody>
         <?php
-            $sql = 'SELECT * FROM angkatan16 ';
-            $query = mysqli_query($db, $sql);
+            // $sql = 'SELECT * FROM angkatan16 ';
+            // $query = mysqli_query($db, $sql);
 
-            while($siswa = mysqli_fetch_array($query)){
-                echo '<tr>';
+            // while($siswa = mysqli_fetch_array($query)){
+            //     echo '<tr>';
 
-                echo '<td>'.$siswa['NRP'].'</td>';
-                echo '<td>'.$siswa['NAMA'].'</td>';
-                echo '<td>'.$siswa['NAMA_PANG'].'</td>';
-                echo '<td>'.$siswa['EMAIL'].'</td>';
-                echo '<td>'.$siswa['NO_TELP'].'</td>';
-                echo '<td>'.$siswa['ALAMAT'].'</td>';
+            //     echo '<td>'.$siswa['NRP'].'</td>';
+            //     echo '<td>'.$siswa['NAMA'].'</td>';
+            //     echo '<td>'.$siswa['NAMA_PANG'].'</td>';
+            //     echo '<td>'.$siswa['EMAIL'].'</td>';
+            //     echo '<td>'.$siswa['NO_TELP'].'</td>';
+            //     echo '<td>'.$siswa['ALAMAT'].'</td>';
 
-                echo '</tr>';
-            }
-        ?> -->
+            //     echo '</tr>';
+            // }
+        ?>
         </tbody>
-    </table>
+    </table> -->
 </body>
 </html>
