@@ -46,15 +46,10 @@
     <!-- Pagination-->
     <link href="pagination/css/pagination.css" rel="stylesheet" type="text/css" />
     <link href="pagination/css/A_green.css" rel="stylesheet" type="text/css" />
-
-    <style type="text/css">
-        *{
-            font-family: "Crete Round", serif, !important;
-        }
-    </style>
     <style type="text/css">
         header {
-            height: 120px;        }
+            height: 120px;        
+        }
         header h1 {
             float: left;
             margin-top: 32px;
@@ -136,23 +131,12 @@
     <style type="text/css">
         footer {
             padding: 60px 0;
+            text-align: center;
             background-color: #f8fafa;
         }
         #footer-info {
             width: 380px;
             margin-top: 10px;
-        }
-        #footer-links {
-            width: 520px;
-            float: right;
-        }
-        #footer-links ul {
-            width: 150px;
-            float: left;
-            margin-left: 20px;
-        }
-        #footer-links ul li {
-            margin: 10px 0;
         }
     </style>
 </head>
@@ -172,14 +156,13 @@
     <div id="hero-image">
         <div class="wrapper">
             <h2><strong>Database of Informatics Engineering 2016</strong></h2>
-            <a href="login.php" class="button-1">Get Started</a>
         </div>
     </div>
 
     <div id="cta">
         <div class="wrapper">
             <h3>Hello There!</h3>
-            <p>This is database of Informatics Engineer 2016 from Institut Teknologi Sepuluh Nopember</p>
+            <p>This is database of Informatics Engineer 2016 from Institut Teknologi Sepuluh Nopember. Our history starts in 2016 and still counting to be success together.</p>
             <a href="login.php" class="button-2">Get Started</a>
     </div>
 
@@ -266,9 +249,7 @@
     <footer>
         <div class="wrapper">
             <div id="footer-info">
-                <center>
-                <p>Copyright 2014 Informatics Engineer of Institut Teknologi Sepuluh Nopember. All rights reserved.</p>
-                </center>
+                <p>Copyright 2016 Informatics Engineer of Institut Teknologi Sepuluh Nopember. All rights reserved.</p>
             </div>
         </div>
     </footer>
