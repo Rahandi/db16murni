@@ -67,15 +67,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	<div class="lgn">
     <div id="inside" >
     	<img src="img/logo.png" height="180" width="220">
-    	<br> 
+    	<br>
+    	<h2 style="color: white"><center><strong>Login</strong></center></h2> 
+ 
     	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
         <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>"> 
-            <label>Username</label> 
+            <label style="color: white">Username</label> 
             <input type="text" name="username"class="form-control" value="<?php echo $username; ?>"> 
             <span class="help-block"><?php echo $username_err; ?></span> 
         </div> 
         <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>"> 
-            <label>Password</label> 
+            <label style="color: white">Password</label> 
             <input type="password" name="password" class="form-control"> 
             <span class="help-block"><?php echo $password_err; ?></span> 
         </div> 
