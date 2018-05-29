@@ -52,18 +52,38 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8"> 
     <title>Login</title> 
     <link rel="stylesheet" type="text/css" href="css/login.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"> 
-
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style type="text/css"> 
         body{ font: 14px sans-serif; } 
         .wrapper{ width: 350px; padding: 20px; } 
     </style> 
 </head> 
 <body> 
-	<img src="img/bg1.png" id="gbr">
+
+<div class="container" id="gbr">  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="img/bg1.png" alt="bg1" style="width:100%;height: 100%">
+      </div>
+      <div class="item">
+        <img src="img/bg2.png" alt="bg2" style="width:100%; height: 100%">
+      </div>
+      <div class="item">
+        <img src="img/bg3.png" alt="bg3" style="width:100%; height: 100%">
+      </div>  
+    </div>
+  </div>
+  </div>
+
+<!-- <img src="img/bg1.png" id="gbr"> -->
 
 <div class="wrapper">
-
 	<div class="lgn">
     <div id="inside" >
     	<img src="img/logo.png" height="180" width="220">
