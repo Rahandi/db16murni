@@ -143,12 +143,12 @@
 <body>
     <header>
         <div class="wrapper">
-            <a href="/db16murni">
+            <a href="/">
                 <h1><img src="img/logo.png" height="50" width="50"> Database<span class="color"></span></h1>
             </a>
             <nav>
                 <ul>
-                    <li><a href="/db16murni">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="login.php">Login</a></li>
                 </ul>
             </nav>
@@ -221,9 +221,6 @@
                                                     echo '<td>'.$data['NO_TELP'].'</td>';
                                                     echo '<td>'.$data['ALAMAT'].'</td>';
 
-                                                    echo '<td>';
-                                                    echo '<td>';
-
                                                     echo '</tr>';
                                                 }
                                                 ?>
@@ -249,9 +246,12 @@
 
     <footer>
         <div class="wrapper">
-            <div id="footer-info">
+            <center>
+                <div id="footer-info">
                 <p>Copyright 2016 Informatics Engineer of Institut Teknologi Sepuluh Nopember. All rights reserved.</p>
             </div>
+            </center>
+            
         </div>
     </footer>
 </body>
