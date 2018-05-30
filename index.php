@@ -143,10 +143,12 @@
 <body>
     <header>
         <div class="wrapper">
-            <h1><img src="img/logo.png" height="50" width="50"> Database<span class="color">.</span></h1>
+            <a href="/db16murni">
+                <h1><img src="img/logo.png" height="50" width="50"> Database<span class="color"></span></h1>
+            </a>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="/db16murni">Home</a></li>
                     <li><a href="login.php">Login</a></li>
                 </ul>
             </nav>
@@ -163,7 +165,7 @@
         <div class="wrapper">
             <h3>Hello There!</h3>
             <p>This is database of Informatics Engineer 2016 from Institut Teknologi Sepuluh Nopember. Our history starts in 2016 and still counting to be success together.</p>
-            <a href="login.php" class="button-2">Get Started</a>
+<!--            <a href="login.php" class="button-2">Get Started</a>-->
     </div>
 
 <!-- DATA TABLE-->
@@ -186,7 +188,6 @@
                                             <th> Email </th>
                                             <th> No Telp </th>
                                             <th> Alamat </th>
-                                            <th> Action </th>
                                             <th></th>
                                         </tr>
                                     </thead>

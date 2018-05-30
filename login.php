@@ -1,5 +1,10 @@
 <?php 
-include('config.php'); 
+include('config.php');
+session_start();
+if(isset($_SESSION['username']) || !empty($_SESSION['username'])){
+    header("location: dashboard.php");
+    exit;
+}
 $username = $password = ""; 
 $username_err = $password_err = ""; 
 if($_SERVER["REQUEST_METHOD"] == "POST"){ 
@@ -102,8 +107,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <span class="help-block"><?php echo $password_err; ?></span> 
         </div> 
         <div class="form-group"> 
-            <input type="submit" class="btn btn-primary" value="Login" id="sub"> 
-        </div> 
+            <input type="submit" class="btn btn-primary" value="Login" id="sub">
+        </div>
     </form> 
     </div>
     

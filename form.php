@@ -13,6 +13,7 @@ if(isset($_GET['nrp'])){
     $data['mark'] = 'Ubah';
     $data['action'] = 'edit';
     $data['link'] = 'edit.php';
+    $data['title'] = 'Edit';
 
     if(mysqli_num_rows($query) < 1){
         $data = array();
@@ -34,21 +35,19 @@ if(isset($_GET['nrp'])){
     $data['mark'] = 'Tambah';
     $data['action'] = 'daftar';
     $data['link'] = 'create.php';
+    $data['title'] = 'Tambah Baru';
 }
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tambah Baru</title>
+    <title><?php echo $data['title'] ?></title>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="au theme template">
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
-
-    <!-- Title Page-->
-    <title>Dashboard 3</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
